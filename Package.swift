@@ -17,7 +17,7 @@
 
 PackageDescription
 
-package = Package(
+package Package(
   name: "GoogleTagManager",
   platforms: [.iOS(.v11)],
   products: [
