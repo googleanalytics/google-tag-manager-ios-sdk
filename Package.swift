@@ -30,7 +30,7 @@ PackageDescription
     .package(
       name: "Firebase",
       url: "https://github.com/firebase/firebase-ios-sdk.git",
-      "8.0.0" ..< "10.0.0"
+      "8.0.0"  "10.0.0"
     ),
   ],
   targets: [
