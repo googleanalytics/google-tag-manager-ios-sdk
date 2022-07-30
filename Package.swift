@@ -14,10 +14,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-import PackageDescription
-
-let package = Package(
+ PackageDescription
+ package  Package(
   name: "GoogleTagManager",
   platforms: [.iOS(.v11)],
   products: [
@@ -30,7 +28,7 @@ let package = Package(
     .package(
       name: "Firebase",
       url: "https://github.com/firebase/firebase-ios-sdk.git",
-      "8.0.0" ..< "10.0.0"
+      "8.0.0" "10.0.0"
     ),
   ],
   targets: [
