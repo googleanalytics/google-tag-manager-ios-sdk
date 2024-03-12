@@ -55,13 +55,13 @@ let package = Package(
     ),
     .binaryTarget(
       name: "GoogleTagManager",
-      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/7.4.4/GoogleTagManager.zip",
-      checksum: "5c77b3ade385b4bfd28722b8966909814f0e811fb4a82450cf1df0cc7eb239cf"
+      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/7.4.5/GoogleTagManager.zip",
+      checksum: "63e9988214e0f6b97c219040fbb48426d4d6a0040536e9a1b6757cbd7094c2f8"
     ),
     .binaryTarget(
       name: "GoogleAnalytics",
-      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/7.4.3/GoogleAnalytics.zip",
-      checksum: "c46d3f0b586ec13576cec5ea790c6793efc83d6e864a5e9ed0b6540ef422ca49"
+      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/7.4.5/GoogleAnalytics.zip",
+      checksum: "935bf339cf606e0dff2477d0dfbf481d05c5ca6cc9e5075f89f498cb7d23d7f9"
     ),
   ],
   cLanguageStandard: .c99,
