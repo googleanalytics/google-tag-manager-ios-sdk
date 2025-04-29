@@ -19,7 +19,7 @@ import PackageDescription
 
 let package = Package(
   name: "GoogleTagManager",
-  platforms: [.iOS(.v11)],
+  platforms: [.iOS(.v12)],
   products: [
     .library(
       name: "GoogleTagManager",
@@ -30,7 +30,7 @@ let package = Package(
     .package(
       name: "Firebase",
       url: "https://github.com/firebase/firebase-ios-sdk.git",
-      "8.0.0" ..< "10.0.0"
+      "11.0.0" ..< "12.0.0"
     ),
   ],
   targets: [
@@ -38,7 +38,6 @@ let package = Package(
       name: "GoogleTagManagerTarget",
       dependencies: [
         "GoogleTagManager",
-        "GoogleAnalytics",
         .product(name: "FirebaseAnalytics", package: "Firebase"),
       ],
       path: "GoogleTagManagerWrapper",
@@ -55,13 +54,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "GoogleTagManager",
-      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/7.4.0/GoogleTagManager.zip",
-      checksum: "09a6214657b3656baa0ee2ed30a9ebec3d768a7f9422b1c82c5f42dbb5814e5c"
-    ),
-    .binaryTarget(
-      name: "GoogleAnalytics",
-      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/7.4.0/GoogleAnalytics.zip",
-      checksum: "255e44905b5168a214995f74889eb8245778789c9fe915031099c6b6a481f21a"
+      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/8.0.0/GoogleTagManager.zip",
+      checksum: "1981333c9bdf7bb19b4fe1e43653cc358a7389f4cdfe548314734a758fd7d444"
     ),
   ],
   cLanguageStandard: .c99,
