@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 // Copyright 2021 Google LLC
@@ -19,7 +19,7 @@ import PackageDescription
 
 let package = Package(
   name: "GoogleTagManager",
-  platforms: [.iOS(.v12)],
+  platforms: [.iOS(.v15)],
   products: [
     .library(
       name: "GoogleTagManager",
@@ -28,7 +28,6 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      name: "Firebase",
       url: "https://github.com/firebase/firebase-ios-sdk.git",
       "11.0.0" ..< "13.0.0"
     ),
