@@ -1,0 +1,16 @@
+name: spm
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  spm:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build
+      run: swift build
