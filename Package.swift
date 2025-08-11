@@ -37,7 +37,7 @@ let package = Package(
       name: "GoogleTagManagerTarget",
       dependencies: [
         "GoogleTagManager",
-        .product(name: "FirebaseAnalytics", package: "Firebase"),
+        .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk"),
       ],
       path: "GoogleTagManagerWrapper",
       linkerSettings: [
