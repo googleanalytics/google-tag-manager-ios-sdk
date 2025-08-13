@@ -57,8 +57,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "GoogleTagManager",
-      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/8.0.0/GoogleTagManager.zip",
-      checksum: "1981333c9bdf7bb19b4fe1e43653cc358a7389f4cdfe548314734a758fd7d444"
+      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/9.0.0/GoogleTagManager.zip",
+      checksum: "6e4bce252764ab4f56f2ebc01e7f24b49f333c31847a9734e81e635c08a934b0"
     ),
   ],
   cLanguageStandard: .c99,
