@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 // Copyright 2021 Google LLC
@@ -19,7 +19,7 @@ import PackageDescription
 
 let package = Package(
   name: "GoogleTagManager",
-  platforms: [.iOS(.v12)],
+  platforms: [.iOS(.v15), .macOS(.v10_15)],
   products: [
     .library(
       name: "GoogleTagManager",
@@ -28,7 +28,6 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      name: "Firebase",
       url: "https://github.com/firebase/firebase-ios-sdk.git",
       "11.0.0" ..< "13.0.0"
     ),
@@ -38,7 +37,11 @@ let package = Package(
       name: "GoogleTagManagerTarget",
       dependencies: [
         "GoogleTagManager",
-        .product(name: "FirebaseAnalytics", package: "Firebase"),
+        .product(
+          name: "FirebaseAnalytics",
+          package: "firebase-ios-sdk",
+          condition: .when(platforms: [.iOS])
+        ),
       ],
       path: "GoogleTagManagerWrapper",
       linkerSettings: [
@@ -54,8 +57,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "GoogleTagManager",
-      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/8.0.0/GoogleTagManager.zip",
-      checksum: "1981333c9bdf7bb19b4fe1e43653cc358a7389f4cdfe548314734a758fd7d444"
+      url: "https://dl.google.com/firebase/ios/tagmanager/swiftpm/9.0.0/GoogleTagManager.zip",
+      checksum: "6e4bce252764ab4f56f2ebc01e7f24b49f333c31847a9734e81e635c08a934b0"
     ),
   ],
   cLanguageStandard: .c99,
