@@ -29,7 +29,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/firebase/firebase-ios-sdk.git",
-      "11.0.0" ..< "13.0.0"
+      "11.0.0" ..< "14.0.0"
     ),
   ],
   targets: [
